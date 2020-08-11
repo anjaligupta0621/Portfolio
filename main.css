@@ -1,0 +1,30 @@
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table, td, th {
+    border: 2px solid rgb(167, 49, 49);
+}
+
+form {
+    background-color: rgb(225, 237, 243);
+}
+
+h3 {
+    color: rgb(83, 70, 70);
+}
+
+a {
+    border: 2px solid rgb(167, 49, 49);
+    background-color: aliceblue;
+}
+
+.smIcon {
+    width: 100px;
+}
+
