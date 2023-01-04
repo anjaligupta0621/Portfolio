@@ -23,7 +23,7 @@
     flex-grow: 1;
     width: 600px;
     overflow: hidden;
-    padding: 0 0 0 70px;
+    padding: 0 0 0 80px;
 }
 
 .experience-description {
@@ -67,8 +67,7 @@
     font-size: 14px;
     white-space: nowrap;
     font-family: "Poppins SemiBold";
-    /* margin: 15px; */
-    margin-left: 30px;
+    /* font-family: "Montserrat Medium"; */
 }
 
 .bullet-logo {
@@ -100,6 +99,7 @@
 .resume-heading {
     display: flex;
     flex-direction: column;
+    /* font-family: "Poppins Bold"; */
 }
 
 .resume-main-heading {
@@ -136,8 +136,8 @@
     font-size: 14px;
     border-radius: 14px;
     color: white;
-    width: 120px;
-    margin-left: 525px;
+    /* width: 120px;
+    margin-left: 525px; */
     /* position: relative; */
 }
 

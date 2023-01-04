@@ -22,7 +22,7 @@ function Resume(props) {
         return (
         <div className='resume-heading'>
             <div className='resume-main-heading'>
-                <div className='heading-bullet'>
+                <div className='heading-bullet'></div>
                     <span>{props.heading ? props.heading : ''}</span>
                     {props.fromDate && props.toDate ? (
                         <div className='heading-date'>
@@ -39,7 +39,6 @@ function Resume(props) {
                     <span>{props.description ? props.description : ''}</span>
                 </div>
             </div>
-        </div>
         )
     };
 
@@ -102,7 +101,7 @@ function Resume(props) {
         </div>,
         <div className='resume-screen-container' key='work-experience'>
             <ResumeHeading 
-                title = {"UF Innovate, Florid, United States"}
+                heading = {"UF Innovate, Florida, United States"}
                 subHeading = {"Software Developer"}
                 fromDate = {"2022"}
                 toDate = {"2022"}
