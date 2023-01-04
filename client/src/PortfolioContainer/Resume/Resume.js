@@ -88,13 +88,13 @@ function Resume(props) {
     const resumeDetails = [
         <div className='resume-screen-container' key="education">
             <ResumeHeading 
-                title = {"University of Florida, United States"}
+                heading = {"University of Florida, United States"}
                 subHeading = {"MS (Master of Science) in Computer Science"}
                 fromDate = {"2022"}
                 toDate = {"Present"}
             />
             <ResumeHeading 
-                title = {"Jaypee Institute of Information Technology, India"}
+                heading = {"Jaypee Institute of Information Technology, India"}
                 subHeading = {"Bachelor of Technology (BTech) in Computer Science and Engineering"}
                 fromDate = {"2015"}
                 toDate = {"2019"}
@@ -108,57 +108,29 @@ function Resume(props) {
                 toDate = {"2022"}
             />
             <div className='experience-description'>
-                <div className='resume-description-text'>
-                    <span>
+                    <span className='resume-description-text'>
                         - Created a web application from scratch named ‘Virtual Review Assist’, of the Innovation Department of University of Florida.
                     </span>
                     <br />
-                    <span>
+                    <span className='resume-description-text'>
                         - Designed the application using Material UI Template and implemented the functionalities using React.JS.
                     </span>
                     <br />
-                    <span>
+                    <span className='resume-description-text'>
                         - Developed features such as User Authentication/Verification via One Time Password (OTP), Document Handling (Upload/Download), Filters, and Routing.
                     </span>
                     <br />
-                    <span>
+                    <span className='resume-description-text'>
                         - Managed the Project using Github by creating Github Issues(User Stories) and assigning tasks to all the members of the team for different Sprints.
                     </span>
-                </div>
             </div>
-            <ResumeHeading 
-                title = {"Wipro Limited, India"}
-                subHeading = {"Project Engineer"}
-                fromDate = {"2019"}
-                toDate = {"2021"}
-            />
-            <div className='experience-description'>
-                <div className='resume-description-text'>
-                    <span>
-                        The project aimed at managing the IT infrastructure and applications of a major telecom client’s operations in India.
-                    </span>
-                </div>
-            </div>
-            <div className='experience-description'>
-                <div className='resume-description-text'>
-                    <span>
-                        - Monitored various trends in the marketing campaigns of the client using DB2 database.
-                    </span>
-                    <br />
-                    <span>
-                        - Analyzed numerous daily, weekly, and monthly reports using Python by collecting data and creating datasets from the database (DB2), and applied data manipulation using NumPy and Pandas.
-                    </span>
-                    <br />
-                    <span>
-                        - Developed scripts for automation of various tasks that were to be performed while monitoring FileNet tools. Automation reduced manual work by 20%.
-                    </span>
-                    <br />
-                    <span>
-                        - Worked on big SQL queries to monitor various tools and applications of FileNet.
-                    </span>
-                </div>
-            </div>,
-            <div className='resume-screen-container programming-skills-container' key='programming-skills'>
+            
+        </div>,
+            
+            <div
+                className='resume-screen-container programming-skills-container' 
+                key='programming-skills'
+            >
                 {programmingSkills.map((skill, index) => (
                     <div className='skill-parent' key={index}>
                         <div className='heading-bullet'></div>
@@ -170,7 +142,7 @@ function Resume(props) {
                             </div>
                         </div>
                     </div>
-                ))}
+                ))};
             </div>,
             <div className='resume-screen-container' key='projects'>
                 {projectDetails.map((projectDetails, index) => (
@@ -198,13 +170,12 @@ function Resume(props) {
                     description = "I have a creative side and love art and hand lettering."
                 />
             </div>
-        </div>
     ];
 
     const handleCarousel = (index) => {
         let offsetHeight = 360;
         let newCarouselOffset = {
-            style: {transform: "translateY("+ index * offsetHeight * -1 + ")"}
+            style: {transform: "translateY("+ index * offsetHeight * -1 + "px)"}
         };
         setCarouselOffsetStyle(newCarouselOffset);
         setSelectedBulletIndex(index);
@@ -218,7 +189,7 @@ function Resume(props) {
             key = {index}
             >
                 <img className='bullet-logo'
-                src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
+                src={'Resume/' + bullet.logoSrc}
                 alt='B' />
                 <span className='bullet-label'>{bullet.label}</span>
             </div>
@@ -232,8 +203,8 @@ function Resume(props) {
                 className='resume-details-carousel'>
                     {resumeDetails.map((ResumeDetail) => ResumeDetail)}
             </div>
-        )
-    }
+        );
+    };
 
     return (
         <div className='resume-container screen-container' id={props.id || ''}>
