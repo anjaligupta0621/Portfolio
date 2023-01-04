@@ -1,0 +1,72 @@
+.resume-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: fit-content;
+    margin: 120px 0;
+}
+
+.resume-card {
+    display: flex;
+    height: 360px;
+    width: 1000px;
+}
+
+.resume-bullets {
+    height: 100%;
+    box-shadow: 15px 0 9px -15px #1f2235;
+    width: 320px;
+}
+
+.resume-bullet-details {
+    flex-grow: 1;
+    width: 600px;
+    overflow: hidden;
+    padding: 0 0 0 70px;
+}
+
+.experience-description {
+    margin: 10px 0 0 0;
+    text-align: justify;
+    max-width: 100%;
+}
+
+.resume-details-carousel {
+    transition: transform 1s ease-out;
+}
+
+.bullet-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bullets {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+}
+
+.bullet {
+    display: flex;
+    align-items: center;
+    background-color: #1f2235;
+    height: 40px;
+    margin: 15px 0;
+    padding: 0 8px;
+    border-radius: 20px;
+    width: 30px;
+    transition: width 0.6s ease;
+    cursor: pointer;
+}
+
+.bullet-label {
+    font-size: 14px;
+    white-space: nowrap;
+    font-family: "Poppins SemiBold";
+    /* margin: 15px; */
+    margin-left: 30px;
+}
