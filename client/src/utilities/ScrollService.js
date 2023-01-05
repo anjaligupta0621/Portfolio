@@ -13,7 +13,7 @@ export default class ScrollService {
     }
 
     scrollToHireMe = () => {
-        let contactMeScreen = document.getElementById("Contact Me");
+        let contactMeScreen = document.getElementById("ContactMe");
         if (!contactMeScreen) return;
         contactMeScreen.scrollIntoView({behavior: "smooth"});
     }
@@ -27,7 +27,7 @@ export default class ScrollService {
     isElementInView = (elem, type) => {
         let rec = elem.getBoundingClientRect();
         let elementTop = rec.top;
-        let elementBottom = rec.Bottom;
+        let elementBottom = rec.bottom;
 
         let partiallyVisible = elementTop < window.innerHeight && elementBottom >= 0;
         let completelyVisible = elementTop >= 0 && elementBottom <= window.innerHeight;
@@ -70,6 +70,6 @@ export default class ScrollService {
                 }
             }
         }
-    }
+    };
 }
 

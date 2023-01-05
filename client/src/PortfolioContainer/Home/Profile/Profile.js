@@ -1,5 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import ScrollService from '../../../utilities/ScrollService';
 import './Profile.css';
 
 function Profile(props) {
@@ -60,7 +61,9 @@ function Profile(props) {
                     </div>
 
                     <div className='profile-options'>
-                        <button className='btn primary-btn'>
+                        <button className='btn primary-btn'
+                            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+                        >
                             {""}
                             Hire Me{" "}
                         </button>

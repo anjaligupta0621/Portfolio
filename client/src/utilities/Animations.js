@@ -7,6 +7,6 @@ export default class Animations {
             return;
         }
         screen.style.opacity = "5";
-        screen.style.transform = "1px";
+        screen.style.transform = "translateY(1px)";
     }
 }
