@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from 'emailjs-com';
 import { TypeAnimation } from "react-type-animation";
 import axios from 'axios';
 import {toast} from 'react-toastify';
@@ -8,6 +9,8 @@ import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
+import Swal from 'sweetalert2';
+
 import './ContactMe.css';
 
 function ContactMe(props) {
@@ -27,6 +30,10 @@ function ContactMe(props) {
   const [banner, setBanner] = useState("");
   const [bool, setBool] = useState(false);
 
+  const SERVICE_ID = "service_4fohahs";
+  const TEMPLATE_ID = "template_0xc6sm9";
+  const USER_ID = "NBdyphUl-D_dr8J0z";
+
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -39,33 +46,63 @@ function ContactMe(props) {
     setMessage(e.target.value);
   };
 
-  const submitForm = async (e) => {
-    e.preventDefault();
-    try {
-        let data = {
-            name,
-            email,
-            message,
-        };
-        setBool(true);
-        const res = await axios.post(`./contact`, data);
-        if (name.length === 0 || email.length === 0 || message.length === 0) {
-            setBanner(res.data.msg)
-            toast.error(res.data.msg)
-            setBool(false)
-        }else if (res.status === 200) {
-            setBanner(res.data.msg)
-            toast.success(res.data.msg)
-            setBool(false)
-            setName("");
-            setEmail("");
-            setMessage("");
-        }
-    } catch (error) {
-        console.log(error);
-    }
+  // const submitForm = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //       let data = {
+  //           name,
+  //           email,
+  //           message,
+  //       };
+  //       setBool(true);
+  //       const res = await axios.post(`./contact`, data);
+  //       if (name.length === 0 || email.length === 0 || message.length === 0) {
+  //           setBanner(res.data.msg)
+  //           toast.error(res.data.msg)
+  //           setBool(false)
+  //       }else if (res.status === 200) {
+  //           setBanner(res.data.msg)
+  //           toast.success(res.data.msg)
+  //           setBool(false)
+  //           setName("");
+  //           setEmail("");
+  //           setMessage("");
+  //       }
+  //   } catch (error) {
+  //       console.log(error);
+  //   }
 
-  }
+  // }
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+
+    const emailValues = {
+      to_name: name,
+      from_name: email,
+      message: message,
+    };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, emailValues, USER_ID)
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully'
+        });
+        setName("")
+        setEmail("");
+        setMessage("");
+      }, (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        })
+      });
+    e.target.reset()
+  };
 
 
   return (
@@ -101,13 +138,15 @@ function ContactMe(props) {
                 <h4>Send Your Email Here!</h4>
                 <img src={imgBack} alt="Image not found" />
             </div>
-            <form onSubmit={submitForm}>
+            <form onSubmit={handleOnSubmit}>
                 <p>{banner}</p>
                 <label htmlFor="name">Name</label>
                 <input 
                     type='text'
                     onChange={handleName}
                     value={name}
+                    label='Name'
+                    name="user_name"
                  />
 
                 <label htmlFor="email">Email</label>
@@ -115,6 +154,8 @@ function ContactMe(props) {
                     type='email'
                     onChange={handleEmail}
                     value={email}
+                    label='Email'
+                    name="user_email"
                  />
 
                 <label htmlFor="message">Message</label>
@@ -122,6 +163,8 @@ function ContactMe(props) {
                     type='text'
                     onChange={handleMessage}
                     value={message}
+                    label='Message'
+                    name="user_message"
                  />
 
                 <div className="send-btn">
