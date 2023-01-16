@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.0c9f038d.css",
-    "main.js": "/Portfolio/static/js/main.c52c390e.js",
+    "main.js": "/Portfolio/static/js/main.2eb5278e.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Portfolio/static/js/787.c4e7f8f9.chunk.js",
     "static/media/me.png": "/Portfolio/static/media/me.415103bf43167d5e976b.png",
     "static/media/CB6A0912-5817-4D75-B749-AAE828461A8C.JPEG": "/Portfolio/static/media/CB6A0912-5817-4D75-B749-AAE828461A8C.3e3482788b67e0088801.JPEG",
@@ -14,14 +14,23 @@
     "static/media/Poppins-Bold.ttf": "/Portfolio/static/media/Poppins-Bold.404e299be26d78e66794.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/Portfolio/static/media/Poppins-ExtraBold.4ed78cd5d64af4efc3c7.ttf",
     "static/media/mailz.jpeg": "/Portfolio/static/media/mailz.d13d5e32cbc73884b526.jpeg",
+    "static/media/burger-logo.png": "/Portfolio/static/media/burger-logo.3f86251e953043a7a382.png",
+    "static/media/salary-logo.png": "/Portfolio/static/media/salary-logo.d56849f35df1bb739b66.png",
     "static/media/bg.jpg": "/Portfolio/static/media/bg.d580cd375921d13ae60d.jpg",
+    "static/media/picaboo-logo.png": "/Portfolio/static/media/picaboo-logo.a2338b6f26ca246c8dbb.png",
+    "static/media/Easyconnect-logo.png": "/Portfolio/static/media/Easyconnect-logo.ddae77011bbcc9f56654.png",
     "index.html": "/Portfolio/index.html",
+    "static/media/programming-skills.svg": "/Portfolio/static/media/programming-skills.d19983a9bee884277ffa4156796bcc0c.svg",
+    "static/media/projects.svg": "/Portfolio/static/media/projects.2b352a52b0588dab62f56a7d1c1e436d.svg",
+    "static/media/interests.svg": "/Portfolio/static/media/interests.809890a3e4fb0938f61bb8a6c34a6940.svg",
+    "static/media/education.svg": "/Portfolio/static/media/education.10cfa28a40119ebd70cf4fb33fd5934e.svg",
+    "static/media/work-history.svg": "/Portfolio/static/media/work-history.a566475dedb99dea4bb8b9115798b2a3.svg",
     "main.0c9f038d.css.map": "/Portfolio/static/css/main.0c9f038d.css.map",
-    "main.c52c390e.js.map": "/Portfolio/static/js/main.c52c390e.js.map",
+    "main.2eb5278e.js.map": "/Portfolio/static/js/main.2eb5278e.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Portfolio/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0c9f038d.css",
-    "static/js/main.c52c390e.js"
+    "static/js/main.2eb5278e.js"
   ]
 }
