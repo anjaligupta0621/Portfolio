@@ -6,6 +6,12 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
+
+import Easyconnect from '../../assets/Testimonial/Easyconnect-logo.png';
+import burger from '../../assets/Testimonial/burger-logo.png';
+import picaboo from '../../assets/Testimonial/picaboo-logo.png';
+import salary from '../../assets/Testimonial/salary-logo.png';
+
 import "./Testimonial.css";
 
 function Testimonial(props) {
@@ -44,8 +50,8 @@ function Testimonial(props) {
   return (
     <div>
       <ScreenHeading
-        title={"Testimonial"}
-        subHeading={"What my clients say about me"}
+        title={"Projects"}
+        subHeading={"Snippets of what I've built"}
       />
       <section className="testimonial-section fade-in" id={props.id || ""}>
         <div className="container">
@@ -60,9 +66,12 @@ function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Anjali and when she delivered, I honestly
-                      fell in love with the project. She is very honest and
-                      delivers on time.
+                      Designed a web application that allows candidates to apply for jobs and recruiters to shortlist candidates. 
+                      The candidates can apply to a job with a single click, once they are logged in. Also, 
+                      Implemented features such as User Session Management, Candidate Shortlisting for recruiters, 
+                      Viewing Jobs, and Applying to multiple jobs for the candidates. Lastly, Created APIs and 
+                      storage in the backend using Golang and SQLite along with Routing, Error Handling, and 
+                      Testing (using Cypress).
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -85,11 +94,11 @@ function Testimonial(props) {
                   </div>
                   <div className="client-info">
                     <img
-                      src="img/testimonial/lady.png"
+                      src={Easyconnect}
                       alt="no internet connection"
                     />
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO UF Innovate</p>
+                    <h5>EasyConnect</h5>
+                    <p>University of Florida</p>
                   </div>
                 </div>
               </div>
@@ -98,9 +107,9 @@ function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Anjali and when she delivered, I honestly
-                      fell in love with the project. She is very honest and
-                      delivers on time.
+                      Designed a web application that allows its users to create their own burgers by adding various ingredients. Implemented features like 
+                      Login/Authentication using Firebase as backend.
+
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -123,11 +132,11 @@ function Testimonial(props) {
                   </div>
                   <div className="client-info">
                     <img
-                      src="img/testimonial/man.png"
+                      src={burger}
                       alt="no internet connection"
                     />
-                    <h5>Man Manny</h5>
-                    <p>CEO Man123</p>
+                    <h5>Burger Builder</h5>
+                    <p>Personal Project</p>
                   </div>
                 </div>
               </div>
@@ -136,9 +145,7 @@ function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Anjali and when she delivered, I honestly
-                      fell in love with the project. She is very honest and
-                      delivers on time.
+                      Analyzed a dataset to predict salary based on years of experience a person has, using the Simple Linear Regression model.Visualized the predicted results against original results to evaluate the model and it showed 98% accuracy.
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -161,11 +168,11 @@ function Testimonial(props) {
                   </div>
                   <div className="client-info">
                     <img
-                      src="img/testimonial/mike.png"
+                      src={salary}
                       alt="no internet connection"
                     />
-                    <h5>Mike Jay</h5>
-                    <p>CEO MikeTech</p>
+                    <h5>Salary Prediction</h5>
+                    <p>Personal Project</p>
                   </div>
                 </div>
               </div>
@@ -174,9 +181,7 @@ function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Anjali and when she delivered, I honestly
-                      fell in love with the project. She is very honest and
-                      delivers on time.
+                      Developed an application having features that implement Neural Style Transfer and Live Filters with basic photo editing capabilities. Modeled convolution neural networks for applying the style of one image on the content of another image by calculating losses and reducing them thus optimizing the result. Used the VGG-16 network for the same.Implemented Viola-Jones algorithm for face detection which showed 100% accuracy and live filters were applied on the detected face, along with a Face-swap feature.
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -199,11 +204,11 @@ function Testimonial(props) {
                   </div>
                   <div className="client-info">
                     <img
-                      src="img/testimonial/lady.png"
+                      src={picaboo}
                       alt="no internet connection"
                     />
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO UF Innovate</p>
+                    <h5>Picaboo: An Image Processing Application</h5>
+                    <p>Jaypee Institute of Information Technology</p>
                   </div>
                 </div>
               </div>

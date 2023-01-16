@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../utilities/ScrollService';
 import Animations from '../../utilities/Animations';
+
+import education from '../../assets/Resume/education.svg';
+import interests from '../../assets/Resume/interests.svg';
+import programmingskills from '../../assets/Resume/programming-skills.svg';
+import projects from '../../assets/Resume/projects.svg';
+import workhistory from '../../assets/Resume/work-history.svg';
+
 import './Resume.css';
 
 function Resume(props) {
@@ -43,11 +50,11 @@ function Resume(props) {
     };
 
     const resumeBullets = [
-        {label: "Education", logoSrc: "education.svg"},
-        {label: "Work History", logoSrc: "work-history.svg"},
-        {label: "Programming Skills", logoSrc: "programming-skills.svg"},
-        {label: "Projects", logoSrc: "projects.svg"},
-        {label: "Interests", logoSrc: "interests.svg"},
+        {label: "Education", logoSrc: education},
+        {label: "Work History", logoSrc: workhistory},
+        {label: "Programming Skills", logoSrc: programmingskills},
+        {label: "Projects", logoSrc: projects},
+        {label: "Interests", logoSrc: interests},
     ];
 
     const programmingSkills = [
@@ -188,7 +195,7 @@ function Resume(props) {
             key = {index}
             >
                 <img className='bullet-logo'
-                src={'Resume/' + bullet.logoSrc}
+                src={bullet.logoSrc}
                 alt='B' />
                 <span className='bullet-label'>{bullet.label}</span>
             </div>
