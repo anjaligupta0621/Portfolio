@@ -115,7 +115,7 @@ function Resume(props) {
             />
             <div className='experience-description'>
                     <span className='resume-description-text'>
-                        - Created a web application from scratch named ‘Virtual Review Assist’, of the Innovation Department of University of Florida.
+                        - Created a web application from scratch named ‘Virtual Review Assist’, of the Innovation Department of University of Florida. 
                     </span>
                     <br />
                     <span className='resume-description-text'>
@@ -130,7 +130,6 @@ function Resume(props) {
                         - Managed the Project using Github by creating Github Issues(User Stories) and assigning tasks to all the members of the team for different Sprints.
                     </span>
             </div>
-            
         </div>,
             
             <div
