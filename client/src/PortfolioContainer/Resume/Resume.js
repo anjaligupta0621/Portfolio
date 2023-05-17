@@ -58,16 +58,16 @@ function Resume(props) {
     ];
 
     const programmingSkills = [
-        {skill:"Javascript", rating: 85},
-        {skill:"React JS", rating: 85},
-        {skill:"Python", rating: 85},
-        {skill:"MySQL", rating: 85},
-        {skill:"Node JS", rating: 85},
-        {skill:"MongoDB", rating: 85},
-        {skill:"Express JS", rating: 85},
+        {skill:"Javascript", rating: 100},
+        {skill:"React JS", rating: 100},
+        {skill:"Python", rating: 100},
+        {skill:"MySQL", rating: 95},
+        {skill:"Node JS", rating: 95},
+        {skill:"MongoDB", rating: 95},
+        {skill:"Express JS", rating: 95},
         {skill:"Salesforce", rating: 85},
-        {skill:"Java", rating: 85},
-        {skill:"C++", rating: 85},
+        {skill:"Java", rating: 70},
+        {skill:"WordPress", rating: 90},
     ];
 
     const projectDetails = [
