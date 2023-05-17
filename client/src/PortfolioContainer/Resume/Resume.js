@@ -147,7 +147,7 @@ function Resume(props) {
                             </div>
                         </div>
                     </div>
-                ))};
+                ))}
             </div>,
             <div className='resume-screen-container' key='projects'>
                 {projectDetails.map((projectDetails, index) => (

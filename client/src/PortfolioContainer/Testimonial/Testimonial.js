@@ -11,6 +11,8 @@ import Easyconnect from '../../assets/Testimonial/Easyconnect-logo.png';
 import burger from '../../assets/Testimonial/burger-logo.png';
 import picaboo from '../../assets/Testimonial/picaboo-logo.png';
 import salary from '../../assets/Testimonial/salary-logo.png';
+import cooking from '../../assets/Testimonial/cooking.png';
+import shapeBG from '../../assets/Testimonial/shape-bg.png';
 
 import "./Testimonial.css";
 
@@ -61,6 +63,48 @@ function Testimonial(props) {
               id="testimonial-carousel"
               {...options}
             >
+              <div className="col-lg-12">
+                <div className="testi-item">
+                  <div className="testi-comment">
+                    <p>
+                      <i className="fa fa-quote-left" />
+                      Designed and developed a web-based application that facilitates real-time interaction between users and cooking videos.
+                      Implemented advanced speech recognition technology to control video playback 
+                      (play, pause, jump to specific timestamps, move forward/backward), 
+                      indicate precise ingredient titration, and extract ingredients from 
+                      recipe videos. Moreover, created APIs using Python and Flask framework 
+                      to enable data retrieval and population of video feed with relevant
+                      information.
+                      <i className="fa fa-quote-right" />
+                    </p>
+                    <ul className="stars list-unstyled">
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star-half-alt" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="client-info">
+                    <img
+                      src={cooking}
+                      alt="no internet connection"
+                    />
+                    <h5>Cooking Assistant</h5>
+                    <p>University of Florida</p>
+                  </div>
+                </div>
+              </div>
               <div className="col-lg-12">
                 <div className="testi-item">
                   <div className="testi-comment">
@@ -212,12 +256,13 @@ function Testimonial(props) {
                   </div>
                 </div>
               </div>
+              
             </OwlCarousel>
           </div>
         </div>
       </section>
       <div className="footer-image">
-        <img src="img/Testimonial/shape-bg.png" />
+        <img src={shapeBG} />
       </div>
     </div>
   );
