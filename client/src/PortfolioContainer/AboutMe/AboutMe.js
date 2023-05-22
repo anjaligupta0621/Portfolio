@@ -16,7 +16,7 @@ function AboutMe(props) {
     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     const SCREEN_CONSTANTS = {
-        description: "I am a Computer Science Graduate student at the University of Florida. I have a keen interest in Software Development, Web Development, Data Science, Data Analytics, and Data Visualisation. I am actively looking for an internship position with a company that takes data-driven decisions to innovate and develop products so that I can enhance my knowledge and skills and give my best for the growth of the company.",
+        description: "I am a Computer Science Graduate student at the University of Florida. I have a keen interest in Software Development, Web Development, Data Science, Data Analytics, and Data Visualisation. I am actively looking for a full-time position with a company that takes data-driven decisions to innovate and develop products so that I can enhance my knowledge and skills and give my best for the growth of the company.",
         highlights: {
             bullets: [
                 "Full Stack Web Development",

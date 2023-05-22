@@ -130,6 +130,32 @@ function Resume(props) {
                         - Managed the Project using Github by creating Github Issues(User Stories) and assigning tasks to all the members of the team for different Sprints.
                     </span>
             </div>
+            {/* <ResumeHeading 
+                heading = {"Wipro Limited, India"}
+                subHeading = {"Project Engineer"}
+                fromDate = {"2019"}
+                toDate = {"2021"}
+            />
+            <div className='experience-description'>
+                    <span className='resume-description-text'>
+                    The project aimed at managing the IT infrastructure and applications of a major telecom client’s operations in India. 
+                    </span>
+                    <br />
+                    <span className='resume-description-text'>
+                        - Monitored various trends in the marketing campaigns of the client using DB2 database.
+                    </span>
+                    <br />
+                    <span className='resume-description-text'>
+                        - Analyzed numerous daily, weekly, and monthly reports using Python by collecting data and creating datasets from the database (DB2), and applied data manipulation using NumPy and Pandas.
+                    </span>
+                    <br />
+                    <span className='resume-description-text'>
+                        - Developed scripts for automation of various tasks to be performed while monitoring FileNet tools. Automation reduced manual work by 20%.
+                    </span>
+                    <span className='resume-description-text'>
+                        - Worked on big SQL queries to monitor various tools and applications of FileNet.
+                    </span>
+            </div> */}
         </div>,
             
             <div
