@@ -61,7 +61,7 @@ function AboutMe(props) {
                                 {""}
                                 Hire Me{" "}
                             </button>
-                            <a href="Resume_AnjaliGupta.pdf" download="Anjali Gupta.pdf">
+                            <a href="Anjali_Gupta_Resume.pdf" download="Anjali Gupta.pdf">
                                 <button className='btn highlighted-btn'>
                                     Get Resume
                                 </button>

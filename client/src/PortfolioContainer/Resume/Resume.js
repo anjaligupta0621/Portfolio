@@ -61,34 +61,40 @@ function Resume(props) {
         {skill:"Javascript", rating: 100},
         {skill:"React JS", rating: 100},
         {skill:"Python", rating: 100},
+        {skill:"React Native", rating: 95},
         {skill:"MySQL", rating: 95},
         {skill:"Node JS", rating: 95},
         {skill:"MongoDB", rating: 95},
         {skill:"Express JS", rating: 95},
         {skill:"Salesforce", rating: 85},
-        {skill:"Java", rating: 70},
         {skill:"WordPress", rating: 90},
     ];
 
     const projectDetails = [
         {
-            title: "Personal Portfolio Website",
-            duration: {fromDate: "2022", toDate: "2023"},
-            description: "A website to showcase my skills and all the details.",
-            subHeading: "Technologies Used: React JS, Bootstrap"
+            title: "SpendWise",
+            duration: {fromDate: "2023", toDate: "2023"},
+            description: "An expense tracking mobile application to manage expenses and budget.",
+            subHeading: "Technologies Used: React Native, NodeJS, MongoDB, ExpressJS, Git"
         },
+        {
+            title: "Cooking Assistant",
+            duration: {fromDate: "2023", toDate: "2023"},
+            description: "A web application that lets you use your voice to talk to YouTube videos while cooking.",
+            subHeading: "Technologies Used: ReactJS, Python, Flask, Git"
+        },
+        // {
+        //     title: "Personal Portfolio Website",
+        //     duration: {fromDate: "2022", toDate: "2023"},
+        //     description: "A website to showcase my skills and give an overview about me.",
+        //     subHeading: "Technologies Used: React JS, Bootstrap"
+        // },
         {
             title: "EasyConnect",
             duration: {fromDate: "2022", toDate: "2022"},
             description: "A web application that allows candidates to apply for jobs and recruiters to shortlist candidates based on their skills",
             subHeading: "Technologies Used: React JS, Golang, Git"
-        },
-        {
-            title: "Burger Builder",
-            duration: {fromDate: "2020", toDate: "2021"},
-            description: "A web application that allows its users to create their own burgers by adding various ingredients.",
-            subHeading: "Technologies Used: React JS, Firebase, Git"
-        },   
+        } 
     ];
 
     const resumeDetails = [
@@ -97,7 +103,7 @@ function Resume(props) {
                 heading = {"University of Florida, United States"}
                 subHeading = {"MS (Master of Science) in Computer Science"}
                 fromDate = {"2022"}
-                toDate = {"Present"}
+                toDate = {"2023"}
             />
             <ResumeHeading 
                 heading = {"Jaypee Institute of Information Technology, India"}
@@ -115,47 +121,40 @@ function Resume(props) {
             />
             <div className='experience-description'>
                     <span className='resume-description-text'>
-                        - Created a web application from scratch named ‘Virtual Review Assist’, of the Innovation Department of University of Florida. 
+                        - Developed and launched a web application that helped city administration manage and review construction designs, achieving a significant increase in efficiency by automating 80% of the manual review process. 
                     </span>
                     <br />
                     <span className='resume-description-text'>
-                        - Designed the application using Material UI Template and implemented the functionalities using React.JS.
+                        - Utilized Material UI to design an intuitive user interface for the application, enhancing user experience and visual appeal.
                     </span>
                     <br />
                     <span className='resume-description-text'>
-                        - Developed features such as User Authentication/Verification via One Time Password (OTP), Document Handling (Upload/Download), Filters, and Routing.
+                        - Spearheaded the implementation of document handling features in React.JS, enabling efficient file uploads, downloads, and management, resulting in a 30% reduction in document processing time and improved collaboration across teams.
                     </span>
                     <br />
                     <span className='resume-description-text'>
-                        - Managed the Project using Github by creating Github Issues(User Stories) and assigning tasks to all the members of the team for different Sprints.
+                        - Exemplified Agile project management by organizing GitHub Issues, assigning tasks, and tracking progress across Sprints.
                     </span>
             </div>
-            {/* <ResumeHeading 
+            <ResumeHeading 
                 heading = {"Wipro Limited, India"}
-                subHeading = {"Project Engineer"}
+                subHeading = {"Software Engineer (Project Engineer)"}
                 fromDate = {"2019"}
                 toDate = {"2021"}
             />
             <div className='experience-description'>
                     <span className='resume-description-text'>
-                    The project aimed at managing the IT infrastructure and applications of a major telecom client’s operations in India. 
+                        - Developed Python automation scripts that reduced manual effort by 20%, optimizing workflow and team productivity.
                     </span>
                     <br />
                     <span className='resume-description-text'>
-                        - Monitored various trends in the marketing campaigns of the client using DB2 database.
+                        - Analyzed marketing campaign trends using DB2 database and harnessed Python libraries (pandas/numPy) to collect, preprocess, and manipulate data which resulted in enhanced insights for marketing initiatives.
                     </span>
                     <br />
                     <span className='resume-description-text'>
-                        - Analyzed numerous daily, weekly, and monthly reports using Python by collecting data and creating datasets from the database (DB2), and applied data manipulation using NumPy and Pandas.
+                        - Crafted advanced SQL queries to effectively monitor various tools and applications within the FileNet system, ensuring smooth operation and optimal performance.
                     </span>
-                    <br />
-                    <span className='resume-description-text'>
-                        - Developed scripts for automation of various tasks to be performed while monitoring FileNet tools. Automation reduced manual work by 20%.
-                    </span>
-                    <span className='resume-description-text'>
-                        - Worked on big SQL queries to monitor various tools and applications of FileNet.
-                    </span>
-            </div> */}
+            </div>
         </div>,
             
             <div

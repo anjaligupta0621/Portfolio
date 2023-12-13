@@ -30,6 +30,7 @@
     margin: 10px 0 0 0;
     text-align: justify;
     max-width: 100%;
+    overflow-y: auto;
 }
 
 .resume-details-carousel {
@@ -94,14 +95,18 @@
     justify-content: space-evenly;
     height: 360px;
     width: 100%;
+    overflow-y: auto;
     /* margin-top: 20px; */
-    overflow: scroll;
+    /* overflow: scroll;
+    scroll-behavior: auto; */
+
 }
 
 .resume-heading {
     display: flex;
     flex-direction: column;
-    /* font-family: "Poppins Bold"; */
+    font-family: "Poppins Bold";
+    margin-top: 10px;
 }
 
 .resume-main-heading {
@@ -124,12 +129,12 @@
     font-size: 14px;
     font-family: "Poppins SemiBold";
     color: #111;
-    margin: 10px 0 0 0;
 }
 
 .resume-heading-description {
     font-size: 12px;
     text-align: justify;
+    margin-top: 8px;
 }
 
 .heading-date {

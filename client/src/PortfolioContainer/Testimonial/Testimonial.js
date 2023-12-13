@@ -13,6 +13,7 @@ import picaboo from '../../assets/Testimonial/picaboo-logo.png';
 import salary from '../../assets/Testimonial/salary-logo.png';
 import cooking from '../../assets/Testimonial/cooking.png';
 import shapeBG from '../../assets/Testimonial/shape-bg.png';
+import spend from '../../assets/Testimonial/spend.png';
 
 import "./Testimonial.css";
 
@@ -63,6 +64,44 @@ function Testimonial(props) {
               id="testimonial-carousel"
               {...options}
             >
+              <div className="col-lg-12">
+                <div className="testi-item">
+                  <div className="testi-comment">
+                    <p>
+                      <i className="fa fa-quote-left" />
+                      Developed an all-inclusive expense management mobile app, enabling users to log, assess, and visualize daily expenses, provide effective expense management tools and user-friendly features.
+                      Integrated user profiles, budget logging, and visual representations, empowering users with categorized spending insights, aiming to provide budget analysis and assist in day-to-day financial management.
+                      Built efficient backend APIs utilizing Node.js and MongoDB, ensuring seamless data management and retrieval for scalable and responsive application.
+                      <i className="fa fa-quote-right" />
+                    </p>
+                    <ul className="stars list-unstyled">
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star-half-alt" />
+                      </li>
+                      <li>
+                        <i className="fa fa-star" />
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="client-info">
+                    <img
+                      src={spend}
+                      alt="no internet connection"
+                    />
+                    <h5>SpendWise</h5>
+                    <p>University of Florida</p>
+                  </div>
+                </div>
+              </div>
               <div className="col-lg-12">
                 <div className="testi-item">
                   <div className="testi-comment">
