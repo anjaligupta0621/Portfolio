@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Children, useState } from 'react';
 import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../utilities/ScrollService';
 import Animations from '../../utilities/Animations';
@@ -15,6 +15,36 @@ function Resume(props) {
 
     const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
     const [carouselOffsetStyle, setCarouselOffsetStyle] = useState({});
+
+    // **************************************************************** //
+    const [showFullDescription, setShowFullDescription] = useState({ desc1: false, desc2: false, desc3: false });
+
+    const toggleDescription = (desc) => {
+        if (desc === 'desc1') {
+            setShowFullDescription(prev => (
+                {
+                ...prev,
+                desc1: !prev.desc1
+                }
+            ))
+        } else if (desc === 'desc2') {
+            setShowFullDescription(prev => (
+                {
+                ...prev,
+                desc2: !prev.desc2
+                }
+            ))
+        } else {
+            setShowFullDescription(prev => (
+                {
+                ...prev,
+                desc3: !prev.desc3
+                }
+            ))
+        }
+    };
+
+    // ****************************************************************//
 
     let fadeInScreenHandler = (screen) => {
         if (screen.fadeInScreen !== props.id) {
@@ -114,27 +144,68 @@ function Resume(props) {
         </div>,
         <div className='resume-screen-container' key='work-experience'>
             <ResumeHeading 
+                heading = {"UF CVM, Florida, United States"}
+                subHeading = {"Software Engineer, Research"}
+                fromDate = {"2024"}
+                toDate = {"Present"}
+            />
+            <div className='experience-description' onClick={() => toggleDescription('desc1')}>
+                {showFullDescription.desc1 ? (
+                    <>
+                        <span className='resume-description-text'>
+                        - Developing a deep learning model using Convolutional Neural Networks (CNN) to detect pain in goats.
+                        </span>
+                        <br />
+                        <span className='resume-description-text'>
+                            - Utilizing VGG-16 to identify facial features of goats and making binary classification into categories - painful and non-painful.
+                        </span>
+                        <br />
+                        <span className='resume-description-text'>
+                            - Researching a pain grimace scale for goats to identify the level of pain.
+                        </span>
+                    </>
+                ) : (
+                    <>
+                        <span className='resume-description-text'>
+                            - Developing a deep learning model using Convolutional 
+                        </span>
+                        <span>...see more</span>
+                    </>
+                )}
+            </div>
+            <ResumeHeading 
                 heading = {"UF Innovate, Florida, United States"}
                 subHeading = {"Software Developer"}
                 fromDate = {"2022"}
                 toDate = {"2022"}
             />
-            <div className='experience-description'>
-                    <span className='resume-description-text'>
-                        - Developed and launched a web application that helped city administration manage and review construction designs, achieving a significant increase in efficiency by automating 80% of the manual review process. 
-                    </span>
-                    <br />
-                    <span className='resume-description-text'>
-                        - Utilized Material UI to design an intuitive user interface for the application, enhancing user experience and visual appeal.
-                    </span>
-                    <br />
-                    <span className='resume-description-text'>
-                        - Spearheaded the implementation of document handling features in React.JS, enabling efficient file uploads, downloads, and management, resulting in a 30% reduction in document processing time and improved collaboration across teams.
-                    </span>
-                    <br />
-                    <span className='resume-description-text'>
-                        - Exemplified Agile project management by organizing GitHub Issues, assigning tasks, and tracking progress across Sprints.
-                    </span>
+            <div className='experience-description' onClick={() => toggleDescription('desc2')}>
+            {showFullDescription.desc2 ? (
+                    <>
+                        <span className='resume-description-text'>
+                            - Developed and launched a web application that helped city administration manage and review construction designs, achieving a significant increase in efficiency by automating 80% of the manual review process. 
+                        </span>
+                        <br />
+                        <span className='resume-description-text'>
+                            - Utilized Material UI to design an intuitive user interface for the application, enhancing user experience and visual appeal.
+                        </span>
+                        <br />
+                        <span className='resume-description-text'>
+                            - Spearheaded the implementation of document handling features in React.JS, enabling efficient file uploads, downloads, and management, resulting in a 30% reduction in document processing time and improved collaboration across teams.
+                        </span>
+                        <br />
+                        <span className='resume-description-text'>
+                            - Exemplified Agile project management by organizing GitHub Issues, assigning tasks, and tracking progress across Sprints.
+                        </span>
+                    </>
+                ) : (
+                    <>
+                        <span className='resume-description-text'>
+                            - Developed and launched a web application that helped city 
+                        </span>
+                        <span>...see more</span>
+                    </>
+                )}
             </div>
             <ResumeHeading 
                 heading = {"Wipro Limited, India"}
@@ -142,18 +213,29 @@ function Resume(props) {
                 fromDate = {"2019"}
                 toDate = {"2021"}
             />
-            <div className='experience-description'>
-                    <span className='resume-description-text'>
-                        - Developed Python automation scripts that reduced manual effort by 20%, optimizing workflow and team productivity.
-                    </span>
-                    <br />
-                    <span className='resume-description-text'>
-                        - Analyzed marketing campaign trends using DB2 database and harnessed Python libraries (pandas/numPy) to collect, preprocess, and manipulate data which resulted in enhanced insights for marketing initiatives.
-                    </span>
-                    <br />
-                    <span className='resume-description-text'>
-                        - Crafted advanced SQL queries to effectively monitor various tools and applications within the FileNet system, ensuring smooth operation and optimal performance.
-                    </span>
+            <div className='experience-description' onClick={() => toggleDescription('desc3')}>
+            {showFullDescription.desc3 ? (
+                    <>
+                        <span className='resume-description-text'>
+                            - Developed Python automation scripts that reduced manual effort by 20%, optimizing workflow and team productivity.
+                        </span>
+                        <br />
+                        <span className='resume-description-text'>
+                            - Analyzed marketing campaign trends using DB2 database and harnessed Python libraries (pandas/numPy) to collect, preprocess, and manipulate data which resulted in enhanced insights for marketing initiatives.
+                        </span>
+                        <br />
+                        <span className='resume-description-text'>
+                            - Crafted advanced SQL queries to effectively monitor various tools and applications within the FileNet system, ensuring smooth operation and optimal performance.
+                        </span>
+                    </>
+                ) : (
+                    <>
+                        <span className='resume-description-text'>
+                            - Developed Python automation scripts that reduced manual effort by 20%, optimizing workflow and team productivity.
+                        </span>
+                        <span>...see more</span>
+                    </>
+                )}
             </div>
         </div>,
             

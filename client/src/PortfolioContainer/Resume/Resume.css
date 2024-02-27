@@ -30,7 +30,8 @@
     margin: 10px 0 0 0;
     text-align: justify;
     max-width: 100%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    /* scroll-behavior: auto; */
 }
 
 .resume-details-carousel {
